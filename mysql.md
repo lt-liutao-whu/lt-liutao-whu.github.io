@@ -12,6 +12,8 @@
 
 使用：use 数据库名字;
 
+查看数据库的表名：show tables;
+
 创建：create database 数据库名字;
 
 ## sql语句分类
@@ -48,4 +50,28 @@ select a,b,c... from 表名 **建议**
 
 select * from 表名 **不建议，会拖累java运行效率**
 
+### 条件查询
+select 字段名 from 表名 while 条件
 
+条件分为：
+< = <= >= != is null(为null)
+
+and:并且 or:或者 in:包含，相当于多个or not:取非  between .. and .. 两个值之间 and优先级比or高
+
+like:模糊查询 支持%和下划线查询 %匹配任意多个字符 下划线，一个下划线匹配一个字符 如果查询中含有_或者%使用转义\在前面
+
+### 排序
+例子：select ename,sal from emp order by sal;(默认升序)
+
+select ename,sal from emp order by sal asc;(指定升序);
+
+select ename,sal from emp order by sal desc;(指定降序);
+
+多个字段排序：select ename,sal from emp order by sal asc,ename asc;当前一个相等时才执行下一个进行排序，否则按照第一个排序。
+
+按照列排序：select ename,sal from emp order by 2;第二列排序。
+
+执行顺序：1、from 2、where 3、select 4、order by(排序总在最后执行)
+
+### 数据处理函数（单行处理函数）
+case .. when .. then .. when .. then else .. end 模拟if函数。
