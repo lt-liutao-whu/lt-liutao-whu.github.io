@@ -75,3 +75,14 @@ select ename,sal from emp order by sal desc;(指定降序);
 
 ### 数据处理函数（单行处理函数）
 case .. when .. then .. when .. then else .. end 模拟if函数。
+
+![image](https://user-images.githubusercontent.com/85482067/154953873-1be19c51-395b-4587-9ea2-f73401b5d588.png)
+
+lower upper
+
+## 连接查询
+
+![image](https://user-images.githubusercontent.com/85482067/154965211-59ded8b8-5961-4329-978d-7129e9e7b9a7.png)
+
+
+
